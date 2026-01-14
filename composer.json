@@ -1,0 +1,52 @@
+{
+    "name": "hexgenerative/ai",
+    "description": "Official PHP SDK for Hexa AI - Lightning-Fast AI API",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hexa Innovate",
+            "email": "support@shipflowstore.store",
+            "homepage": "https://shipflowstore.store"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/hexainnovate/hexgenerative-php/issues",
+        "source": "https://github.com/hexainnovate/hexgenerative-php"
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HexaGenerative\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HexaGenerative\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "keywords": [
+        "ai",
+        "api",
+        "hexa",
+        "llm",
+        "chat",
+        "generative",
+        "openai",
+        "gpt"
+    ],
+    "homepage": "https://shipflowstore.store",
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
