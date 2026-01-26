@@ -75,6 +75,46 @@ try {
 }
 ```
 
+## Agentic Features
+
+### Agent Tasks
+```php
+$result = $client->agent->run([
+    'task' => 'Research AI trends and summarize',
+    'model' => 'hexa-ultra',
+]);
+print_r($result);
+```
+
+### RAG (Knowledge Base)
+```php
+// Upload document
+$client->rag->upload('Company Policy', 'Employees get 30 days leave...');
+
+// Search
+$results = $client->rag->search('leave policy');
+```
+
+### Context Management (300K Tokens)
+```php
+$session = $client->context->create('You are a helpful assistant');
+$sessionId = $session['data']['session_id'];
+
+$client->context->add($sessionId, ['role' => 'user', 'content' => 'Hello!']);
+```
+
+### Code Execution
+```php
+$result = $client->code->execute('print(sum(range(100)))');
+echo $result['data']['output'];
+```
+
+### Tools
+```php
+$tools = $client->tools->list();
+echo "Found " . $tools['data']['count'] . " tools";
+```
+
 ## License
 
 MIT
